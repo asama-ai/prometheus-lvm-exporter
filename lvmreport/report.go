@@ -63,43 +63,10 @@ func (d *ReportData) GroupByName(name GroupName) []Row {
 	case SEG:
 		return d.SEG
 	case PVSEG:
-		return d.uniquePVSEGRows()
+		return d.PVSEG
 	}
 
 	return nil
 }
 
 type Row map[string]string
-
-func (d *ReportData) uniquePVSEGRows() []Row {
-	if d == nil || len(d.PVSEG) == 0 {
-		return nil
-	}
-
-	seen := map[string]struct{}{}
-	result := make([]Row, 0, len(d.PVSEG))
-
-	for _, row := range d.PVSEG {
-		pvUUID := row["pv_uuid"]
-		lvUUID := row["lv_uuid"]
-
-		if pvUUID == "" || lvUUID == "" {
-			continue
-		}
-
-		key := pvUUID + "\x00" + lvUUID
-
-		if _, ok := seen[key]; ok {
-			continue
-		}
-
-		seen[key] = struct{}{}
-
-		result = append(result, Row{
-			"pv_uuid": pvUUID,
-			"lv_uuid": lvUUID,
-		})
-	}
-
-	return result
-}
