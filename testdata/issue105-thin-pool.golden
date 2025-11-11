@@ -591,9 +591,15 @@ lvm_pv_tags{pv_tags="",pv_uuid="jTZTB1-3SXG-End5-n4XS-yZOU-rIBw-v3nDPn"} 1
 # HELP lvm_pv_used Total amount of allocated space
 # TYPE lvm_pv_used gauge
 lvm_pv_used{pv_uuid="jTZTB1-3SXG-End5-n4XS-yZOU-rIBw-v3nDPn"} 1.082130432e+09
+# HELP lvm_pvseg_info 
+# TYPE lvm_pvseg_info gauge
+lvm_pvseg_info{lv_uuid="DEwJ31-ay2n-OaOU-S8YI-R5fQ-jmL8-pM3MBu",pv_uuid="jTZTB1-3SXG-End5-n4XS-yZOU-rIBw-v3nDPn"} 1
+lvm_pvseg_info{lv_uuid="VvuLW3-KTRc-clwU-vfcM-LFHt-f4B1-ekoqqj",pv_uuid="jTZTB1-3SXG-End5-n4XS-yZOU-rIBw-v3nDPn"} 1
+lvm_pvseg_info{lv_uuid="vWnwW4-Wxyg-Pwvy-Zmvu-eJRe-H9V3-WhsL1R",pv_uuid="jTZTB1-3SXG-End5-n4XS-yZOU-rIBw-v3nDPn"} 1
 # HELP lvm_unknown_field_count Fields reported by LVM not recognized by exporter
 # TYPE lvm_unknown_field_count gauge
 lvm_unknown_field_count{details="",group="pv"} 0
+lvm_unknown_field_count{details="",group="pvseg"} 0
 lvm_unknown_field_count{details="lv_autoactivation, writecache_block_size",group="lv"} 2
 lvm_unknown_field_count{details="vg_autoactivation",group="vg"} 1
 # HELP lvm_up Whether scrape was successful

@@ -370,6 +370,7 @@ lvm_pv_used{pv_uuid="yc1zVe-9eOY-3bsX-qwqN-Wkk0-eDze-Rgrmzh"} 4.194304e+06
 # TYPE lvm_unknown_field_count gauge
 lvm_unknown_field_count{details="",group="lv"} 0
 lvm_unknown_field_count{details="",group="pv"} 0
+lvm_unknown_field_count{details="",group="pvseg"} 0
 lvm_unknown_field_count{details="",group="vg"} 0
 # HELP lvm_up Whether scrape was successful
 # TYPE lvm_up gauge

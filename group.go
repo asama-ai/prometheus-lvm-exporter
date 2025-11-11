@@ -19,4 +19,4 @@ type group struct {
 	numericFields []*numericField
 }
 
-var allGroups = []*group{pvGroup, vgGroup, lvGroup}
+var allGroups = []*group{pvGroup, vgGroup, lvGroup, pvsegGroup}
