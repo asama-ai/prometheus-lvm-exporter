@@ -314,10 +314,6 @@ lvm_pv_in_use{pv_uuid="yc1zVe-9eOY-3bsX-qwqN-Wkk0-eDze-Rgrmzh"} 1
 # TYPE lvm_pv_info gauge
 lvm_pv_info{pv_attr="a--",pv_fmt="lvm2",pv_name="/dev/loop0",pv_tags="",pv_uuid="yc1zVe-9eOY-3bsX-qwqN-Wkk0-eDze-Rgrmzh"} 1
 lvm_pv_info{pv_attr="a--",pv_fmt="lvm2",pv_name="/dev/loop1",pv_tags="",pv_uuid="WVIH97-eRwc-thU9-mCj9-80zl-UDp6-VlhBOg"} 1
-# HELP lvm_pv_lv_info Information about the PV's LVs
-# TYPE lvm_pv_lv_info gauge
-lvm_pv_lv_info{pv_uuid="WVIH97-eRwc-thU9-mCj9-80zl-UDp6-VlhBOg"} 0
-lvm_pv_lv_info{pv_uuid="yc1zVe-9eOY-3bsX-qwqN-Wkk0-eDze-Rgrmzh"} 0
 # HELP lvm_pv_major Device major number
 # TYPE lvm_pv_major gauge
 lvm_pv_major{pv_major="7",pv_uuid="WVIH97-eRwc-thU9-mCj9-80zl-UDp6-VlhBOg"} 7
@@ -374,6 +370,7 @@ lvm_pv_used{pv_uuid="yc1zVe-9eOY-3bsX-qwqN-Wkk0-eDze-Rgrmzh"} 4.194304e+06
 # TYPE lvm_unknown_field_count gauge
 lvm_unknown_field_count{details="",group="lv"} 0
 lvm_unknown_field_count{details="",group="pv"} 0
+lvm_unknown_field_count{details="",group="pvseg"} 0
 lvm_unknown_field_count{details="",group="vg"} 0
 # HELP lvm_up Whether scrape was successful
 # TYPE lvm_up gauge
