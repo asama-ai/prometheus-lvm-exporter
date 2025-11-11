@@ -314,6 +314,10 @@ lvm_pv_in_use{pv_uuid="lMenN6-bGnN-5B5o-MW7n-2ef2-VWuk-E27yru"} 1
 # TYPE lvm_pv_info gauge
 lvm_pv_info{pv_name="/dev/loop0",pv_uuid="hHVkeX-XRdB-hAGU-MHza-yTY4-P3xJ-oij0yI"} 1
 lvm_pv_info{pv_name="/dev/loop1",pv_uuid="lMenN6-bGnN-5B5o-MW7n-2ef2-VWuk-E27yru"} 1
+# HELP lvm_pv_lv_info Information about the PV's LVs
+# TYPE lvm_pv_lv_info gauge
+lvm_pv_lv_info{pv_uuid="hHVkeX-XRdB-hAGU-MHza-yTY4-P3xJ-oij0yI"} 2
+lvm_pv_lv_info{pv_uuid="lMenN6-bGnN-5B5o-MW7n-2ef2-VWuk-E27yru"} 0
 # HELP lvm_pv_major Device major number
 # TYPE lvm_pv_major gauge
 lvm_pv_major{pv_major="7",pv_uuid="hHVkeX-XRdB-hAGU-MHza-yTY4-P3xJ-oij0yI"} 7

@@ -552,6 +552,9 @@ lvm_pv_in_use{pv_uuid="jTZTB1-3SXG-End5-n4XS-yZOU-rIBw-v3nDPn"} 1
 # HELP lvm_pv_info 
 # TYPE lvm_pv_info gauge
 lvm_pv_info{pv_name="/dev/loop0",pv_uuid="jTZTB1-3SXG-End5-n4XS-yZOU-rIBw-v3nDPn"} 1
+# HELP lvm_pv_lv_info Information about the PV's LVs
+# TYPE lvm_pv_lv_info gauge
+lvm_pv_lv_info{pv_uuid="jTZTB1-3SXG-End5-n4XS-yZOU-rIBw-v3nDPn"} 3
 # HELP lvm_pv_major Device major number
 # TYPE lvm_pv_major gauge
 lvm_pv_major{pv_major="7",pv_uuid="jTZTB1-3SXG-End5-n4XS-yZOU-rIBw-v3nDPn"} 7

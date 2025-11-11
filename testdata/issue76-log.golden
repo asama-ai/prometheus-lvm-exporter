@@ -46,6 +46,10 @@ lvm_pv_in_use{pv_uuid="jdxg63-YOt9-TTeX-msrw-dyDl-iHr0-3RotR4"} 1
 # TYPE lvm_pv_info gauge
 lvm_pv_info{pv_name="/dev/nvme1n1",pv_uuid="jdxg63-YOt9-TTeX-msrw-dyDl-iHr0-3RotR4"} 1
 lvm_pv_info{pv_name="/dev/nvme2n1",pv_uuid="KAPyRJ-O3a6-wHoA-k8lh-xnMN-VGxX-ARKOHU"} 1
+# HELP lvm_pv_lv_info Information about the PV's LVs
+# TYPE lvm_pv_lv_info gauge
+lvm_pv_lv_info{pv_uuid="KAPyRJ-O3a6-wHoA-k8lh-xnMN-VGxX-ARKOHU"} 0
+lvm_pv_lv_info{pv_uuid="jdxg63-YOt9-TTeX-msrw-dyDl-iHr0-3RotR4"} 0
 # HELP lvm_pv_major Device major number
 # TYPE lvm_pv_major gauge
 lvm_pv_major{pv_major="259",pv_uuid="KAPyRJ-O3a6-wHoA-k8lh-xnMN-VGxX-ARKOHU"} 259

@@ -581,6 +581,10 @@ lvm_pv_in_use{pv_uuid="yc1zVe-9eOY-3bsX-qwqN-Wkk0-eDze-Rgrmzh"} 1
 # TYPE lvm_pv_info gauge
 lvm_pv_info{pv_name="/dev/loop0",pv_uuid="yc1zVe-9eOY-3bsX-qwqN-Wkk0-eDze-Rgrmzh"} 1
 lvm_pv_info{pv_name="[unknown]",pv_uuid="WVIH97-eRwc-thU9-mCj9-80zl-UDp6-VlhBOg"} 1
+# HELP lvm_pv_lv_info Information about the PV's LVs
+# TYPE lvm_pv_lv_info gauge
+lvm_pv_lv_info{pv_uuid="WVIH97-eRwc-thU9-mCj9-80zl-UDp6-VlhBOg"} 0
+lvm_pv_lv_info{pv_uuid="yc1zVe-9eOY-3bsX-qwqN-Wkk0-eDze-Rgrmzh"} 0
 # HELP lvm_pv_major Device major number
 # TYPE lvm_pv_major gauge
 lvm_pv_major{pv_major="0",pv_uuid="WVIH97-eRwc-thU9-mCj9-80zl-UDp6-VlhBOg"} 0
