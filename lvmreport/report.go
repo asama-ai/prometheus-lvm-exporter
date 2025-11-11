@@ -1,9 +1,6 @@
 package lvmreport
 
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
 
 type GroupName string
 
@@ -66,7 +63,7 @@ func (d *ReportData) GroupByName(name GroupName) []Row {
 	case SEG:
 		return d.SEG
 	case PVSEG:
-		return d.PVSEG
+		return d.uniquePVSEGRows()
 	}
 
 	return nil
@@ -74,36 +71,35 @@ func (d *ReportData) GroupByName(name GroupName) []Row {
 
 type Row map[string]string
 
-func (d *ReportData) populatePVLVInfo() {
-	if d == nil {
-		return
+func (d *ReportData) uniquePVSEGRows() []Row {
+	if d == nil || len(d.PVSEG) == 0 {
+		return nil
 	}
 
-	counts := map[string]int{}
+	seen := map[string]struct{}{}
+	result := make([]Row, 0, len(d.PVSEG))
 
 	for _, row := range d.PVSEG {
 		pvUUID := row["pv_uuid"]
-		if pvUUID == "" {
+		lvUUID := row["lv_uuid"]
+
+		if pvUUID == "" || lvUUID == "" {
 			continue
 		}
 
-		if row["lv_uuid"] == "" {
+		key := pvUUID + "\x00" + lvUUID
+
+		if _, ok := seen[key]; ok {
 			continue
 		}
 
-		counts[pvUUID]++
+		seen[key] = struct{}{}
+
+		result = append(result, Row{
+			"pv_uuid": pvUUID,
+			"lv_uuid": lvUUID,
+		})
 	}
 
-	for _, row := range d.PV {
-		pvUUID := row["pv_uuid"]
-		if pvUUID == "" {
-			continue
-		}
-
-		row["pv_lv_info"] = strconv.Itoa(counts[pvUUID])
-	}
-}
-
-func (d *ReportData) PopulateDerivedFields() {
-	d.populatePVLVInfo()
+	return result
 }

@@ -72,11 +72,6 @@ var pvGroup = &group{
 			desc:       "Set if PV is used",
 		},
 		{
-			fieldName:  "pv_lv_info",
-			metricName: "pv_lv_info",
-			desc:       "Information about the PV's LVs",
-		},
-		{
 			fieldName:  "pv_major",
 			metricName: "pv_major",
 			flags:      asRawLabel,
