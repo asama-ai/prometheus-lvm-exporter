@@ -69,6 +69,8 @@ func (c *collector) collect(ctx context.Context, ch chan<- prometheus.Metric) er
 		return err
 	}
 
+	data.PopulateDerivedFields()
+
 	g, _ := errgroup.WithContext(ctx)
 
 	for _, i := range c.gc {

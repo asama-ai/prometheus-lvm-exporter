@@ -1,6 +1,9 @@
 package lvmreport
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 type GroupName string
 
@@ -70,3 +73,37 @@ func (d *ReportData) GroupByName(name GroupName) []Row {
 }
 
 type Row map[string]string
+
+func (d *ReportData) populatePVLVInfo() {
+	if d == nil {
+		return
+	}
+
+	counts := map[string]int{}
+
+	for _, row := range d.PVSEG {
+		pvUUID := row["pv_uuid"]
+		if pvUUID == "" {
+			continue
+		}
+
+		if row["lv_uuid"] == "" {
+			continue
+		}
+
+		counts[pvUUID]++
+	}
+
+	for _, row := range d.PV {
+		pvUUID := row["pv_uuid"]
+		if pvUUID == "" {
+			continue
+		}
+
+		row["pv_lv_info"] = strconv.Itoa(counts[pvUUID])
+	}
+}
+
+func (d *ReportData) PopulateDerivedFields() {
+	d.populatePVLVInfo()
+}
