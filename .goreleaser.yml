@@ -64,7 +64,7 @@ dockers:
       - LICENSE
       - README.md
     image_templates:
-      - ghcr.io/hansmi/prometheus-lvm-exporter:{{.Tag}}-amd64
+      - ghcr.io/asama-ai/prometheus-lvm-exporter:{{.Tag}}-amd64
     build_flag_templates:
       - --pull
       - --platform=linux/amd64
@@ -79,7 +79,7 @@ dockers:
     dockerfile: contrib/Dockerfile.goreleaser
     extra_files: *docker_extra_files
     image_templates:
-      - ghcr.io/hansmi/prometheus-lvm-exporter:{{.Tag}}-arm64
+      - ghcr.io/asama-ai/prometheus-lvm-exporter:{{.Tag}}-arm64
     build_flag_templates:
       - --pull
       - --platform=linux/arm64
@@ -90,13 +90,13 @@ dockers:
       - --label=org.opencontainers.image.source={{.GitURL}}
 
 docker_manifests:
-  - name_template: ghcr.io/hansmi/prometheus-lvm-exporter:{{.Tag}}
+  - name_template: ghcr.io/asama-ai/prometheus-lvm-exporter:{{.Tag}}
     image_templates: &docker_manifest_image_templates
-      - ghcr.io/hansmi/prometheus-lvm-exporter:{{.Tag}}-amd64
-      - ghcr.io/hansmi/prometheus-lvm-exporter:{{.Tag}}-arm64
-  - name_template: ghcr.io/hansmi/prometheus-lvm-exporter:v{{.Major}}
+      - ghcr.io/asama-ai/prometheus-lvm-exporter:{{.Tag}}-amd64
+      - ghcr.io/asama-ai/prometheus-lvm-exporter:{{.Tag}}-arm64
+  - name_template: ghcr.io/asama-ai/prometheus-lvm-exporter:v{{.Major}}
     image_templates: *docker_manifest_image_templates
-  - name_template: ghcr.io/hansmi/prometheus-lvm-exporter:latest
+  - name_template: ghcr.io/asama-ai/prometheus-lvm-exporter:latest
     image_templates: *docker_manifest_image_templates
 
 changelog:
