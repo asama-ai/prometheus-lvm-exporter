@@ -9,7 +9,8 @@ var pvsegGroup = &group{
 	keyFields: []*textField{
 		{
 			fieldName:  "pv_uuid",
-			metricName: "pvseg_pv_uuid",
+			metricName: "pv_uuid",
+			flags:      asInfoLabel,
 			desc:       "Physical volume UUID",
 		},
 	},
@@ -17,7 +18,7 @@ var pvsegGroup = &group{
 	textFields: []*textField{
 		{
 			fieldName:  "lv_uuid",
-			metricName: "pvseg_lv_uuid",
+			metricName: "lv_uuid",
 			flags:      asInfoLabel,
 			desc:       "Logical volume UUID associated with the PV segment",
 		},

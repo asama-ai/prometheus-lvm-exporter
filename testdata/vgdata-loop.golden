@@ -368,8 +368,8 @@ lvm_pv_used{pv_uuid="hHVkeX-XRdB-hAGU-MHza-yTY4-P3xJ-oij0yI"} 4.194304e+08
 lvm_pv_used{pv_uuid="lMenN6-bGnN-5B5o-MW7n-2ef2-VWuk-E27yru"} 0
 # HELP lvm_pvseg_info 
 # TYPE lvm_pvseg_info gauge
-lvm_pvseg_info{pvseg_lv_uuid="U3cZuX-dPzH-Pz0e-UzHP-twnG-EzbU-EWn81B",pvseg_pv_uuid="hHVkeX-XRdB-hAGU-MHza-yTY4-P3xJ-oij0yI"} 1
-lvm_pvseg_info{pvseg_lv_uuid="rG0ue9-Kw1s-beAJ-shyy-AnID-6NRY-rtcN8K",pvseg_pv_uuid="hHVkeX-XRdB-hAGU-MHza-yTY4-P3xJ-oij0yI"} 1
+lvm_pvseg_info{lv_uuid="U3cZuX-dPzH-Pz0e-UzHP-twnG-EzbU-EWn81B",pv_uuid="hHVkeX-XRdB-hAGU-MHza-yTY4-P3xJ-oij0yI"} 1
+lvm_pvseg_info{lv_uuid="rG0ue9-Kw1s-beAJ-shyy-AnID-6NRY-rtcN8K",pv_uuid="hHVkeX-XRdB-hAGU-MHza-yTY4-P3xJ-oij0yI"} 1
 # HELP lvm_unknown_field_count Fields reported by LVM not recognized by exporter
 # TYPE lvm_unknown_field_count gauge
 lvm_unknown_field_count{details="",group="lv"} 0

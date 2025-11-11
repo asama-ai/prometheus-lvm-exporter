@@ -43,12 +43,12 @@ lvm_lv_info{lv_full_name="",lv_name="lv_root",lv_uuid="Il5cUA-BDjk-T5ZB-vTdr-EsJ
 lvm_pv_info{pv_name="",pv_uuid=""} 1
 # HELP lvm_pvseg_info 
 # TYPE lvm_pvseg_info gauge
-lvm_pvseg_info{pvseg_lv_uuid="FNkhIS-Vozm-bmE7-dmHD-vjOM-103g-irxDIb",pvseg_pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
-lvm_pvseg_info{pvseg_lv_uuid="Il5cUA-BDjk-T5ZB-vTdr-EsJd-6bFa-zjuhgB",pvseg_pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
-lvm_pvseg_info{pvseg_lv_uuid="PucjXb-iwvM-Px3b-tfO8-xy43-F8B4-2uEyc0",pvseg_pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
-lvm_pvseg_info{pvseg_lv_uuid="VBJ3Ct-yDJ3-JPGS-Zyew-tCO5-7AvK-INt3g6",pvseg_pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
-lvm_pvseg_info{pvseg_lv_uuid="b3Wegf-3TOd-I5YS-ll0X-RZgI-QxAu-qv0fbc",pvseg_pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
-lvm_pvseg_info{pvseg_lv_uuid="zqJxaj-K6iF-f1NV-4G35-8Pg7-hhpn-p77SMP",pvseg_pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
+lvm_pvseg_info{lv_uuid="FNkhIS-Vozm-bmE7-dmHD-vjOM-103g-irxDIb",pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
+lvm_pvseg_info{lv_uuid="Il5cUA-BDjk-T5ZB-vTdr-EsJd-6bFa-zjuhgB",pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
+lvm_pvseg_info{lv_uuid="PucjXb-iwvM-Px3b-tfO8-xy43-F8B4-2uEyc0",pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
+lvm_pvseg_info{lv_uuid="VBJ3Ct-yDJ3-JPGS-Zyew-tCO5-7AvK-INt3g6",pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
+lvm_pvseg_info{lv_uuid="b3Wegf-3TOd-I5YS-ll0X-RZgI-QxAu-qv0fbc",pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
+lvm_pvseg_info{lv_uuid="zqJxaj-K6iF-f1NV-4G35-8Pg7-hhpn-p77SMP",pv_uuid="DobPwo-HVJ3-hjKh-m4q7-y4e6-bmHi-2avBcN"} 1
 # HELP lvm_unknown_field_count Fields reported by LVM not recognized by exporter
 # TYPE lvm_unknown_field_count gauge
 lvm_unknown_field_count{details="",group="lv"} 0
