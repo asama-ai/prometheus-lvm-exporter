@@ -9,6 +9,7 @@ permissions: {}
 
 jobs:
   test:
+    if:  github.event_name == 'workflow_dispatch'
     uses: hansmi/ghactions-go-test-workflow/.github/workflows/test.yaml@v0.2
     with:
       runs-on: ubuntu-latest
